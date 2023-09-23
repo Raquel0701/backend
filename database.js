@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-// Corrige la URL de conexión
 const URI = "mongodb://127.0.0.1/usuarios_db";
 
 mongoose

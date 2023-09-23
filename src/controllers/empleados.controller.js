@@ -1,4 +1,4 @@
-const Empleado = require("../models/Empleado"); // Asegúrate de importar el modelo de empleado si lo tienes definido
+const Empleado = require("../models/Empleado"); 
 
 const empleadoCtrl = {};
 
@@ -59,14 +59,13 @@ empleadoCtrl.editEmpleado = async (req, res) => {
 };
 
 // Eliminar un empleado por su ID
-// Eliminar un empleado por su ID
 empleadoCtrl.deleteEmpleado = async (req, res) => {
   try {
     const empleado = await Empleado.findById(req.params.id);
     if (!empleado) {
       return res.status(404).json({ mensaje: "Empleado no encontrado" });
     }
-    await Empleado.findByIdAndRemove(req.params.id); // Utiliza findByIdAndRemove para eliminar el empleado
+    await Empleado.findByIdAndRemove(req.params.id); 
     res.json({ mensaje: "Empleado eliminado con éxito" });
   } catch (error) {
     res.status(500).json({ error: error.message });
