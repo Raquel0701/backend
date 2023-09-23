@@ -12,7 +12,7 @@ app.set('nombreApp', 'Gestión de empleados');
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cors());
-app.use('/api/lista',require('./src/routes/empleados.routes'));
+app.use('/api/empleados',require('./src/routes/empleados.routes'));
 
 
 module.exports = app;
